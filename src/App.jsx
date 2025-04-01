@@ -47,6 +47,12 @@ import Heading from "./components/heading";
 import About from "./components/about";
 import List from "./components/list";
 import Forms from "./components/forms";
+import reactpic from "./assets/react.svg";
+import Userboard from "./components/Userboard";
+import image1 from "./assets/harsh.jpg";
+import image2 from "./assets/harsh1.jpg";
+import image3 from "./assets/harsh2.png";
+import Button from "./components/button";
 
 const user = {
   name: "ABC",
@@ -58,6 +64,11 @@ export default function App() {
   const [color, setColor] = useState("Red");
 
   const change_to_pink = () => setColor("Pink");
+
+  const [count, setCount] = useState(0);
+  const handleClick = () => {
+    setCount(count + 1);
+  };
 
   return (
     <>
@@ -143,6 +154,86 @@ export default function App() {
           USING FORMS IN REACT
         </h1>
         <Forms />
+        <h1
+          style={{
+            color: "yellow",
+            backgroundColor: "black",
+            margin: 10,
+            padding: 10,
+            textAlign: "center",
+            fontSize: 40,
+          }}
+        >
+          --------------importing iamge and use {} to use it i.e. img src=
+          {reactpic}------------------
+        </h1>
+        <img
+          src={reactpic}
+          alt=""
+          style={{
+            margin: 10,
+            padding: 10,
+            width: 40,
+            height: 40,
+            backgroundColor: "black",
+            display: "flex",
+            // textAlign: "center",
+            marginLeft: "50%",
+          }}
+        />
+        {/* !--------------USING PROPS------------------ */}
+        <h1
+          style={{
+            color: "yellow",
+            backgroundColor: "black",
+            margin: 10,
+            padding: 10,
+            textAlign: "center",
+            fontSize: 40,
+          }}
+        >
+          --------------USING PROPS------------------
+        </h1>
+        <div className="userboard">
+          <Userboard
+            name="Harsh Tripathi"
+            details="This is details for Harsh Tripathi"
+            image={image1}
+            style={{ borderRadius: "10px", border: "1px solid black" }}
+          />
+          {/*  in html the data passed are called attribuites */}
+          {/*  in jsx the data passed are called props */}
+          <Userboard
+            name="Sunny Tripathi"
+            details="This is details for Sunny Tripathi"
+            image={image2}
+            style={{ "border-radius": "10px", border: "3px solid black" }}
+          />
+          <Userboard
+            name="Tripathi ji"
+            details="This is details for Tripathi ji"
+            image={image3}
+            // style={{ "border-radius": "10px", border: "1px solid black" }} and below is same
+            style={{ borderRadius: "10px", border: "1px solid black" }}
+          />
+          <Userboard
+            name="Tripathi"
+            details="This is details for Tripathi"
+            image={image3}
+            // style={{ "border-radius": "10px", border: "1px solid black" }} and below is same
+            style={{ borderRadius: "10px", border: "1px solid black" }}
+          >
+            <h1>HELLO I AM HARSH TRIPATHI</h1>
+            <h2>I AM 23 YEARS OLD</h2>
+          </Userboard>
+          {/* 
+          //! passing handleClick function as props   
+          */}
+          <hr />
+          <Button handleClick={handleClick} text="Click Me">
+            <h1>{count}</h1>
+          </Button>
+        </div>
       </BrowserRouter>
     </>
   );
