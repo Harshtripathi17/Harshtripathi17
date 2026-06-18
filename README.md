@@ -5,7 +5,7 @@
   A detail-oriented Computer Science graduate specializing in data modeling, relational databases, and interactive business intelligence dashboards. Leveraging a strong engineering background to bridge application pipelines with analytical insights.
 </p>
 
-- 📊 **Data Analytics Portfolio:** [https://harshtripathi-portfolio.netlify.app/](https://harshtripathi-portfolio.netlify.app/)
+- 📊 **Data Analytics Portfolio:** [https://harsh-tripathi-analytics.netlify.app/](https://harsh-tripathi-analytics.netlify.app/)
 - 📫 **How to reach me:** sunnytripathi.258@gmail.com
 
 <h3 align="left">Connect with me:</h3>
